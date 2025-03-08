@@ -82,7 +82,22 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        return null;
+
+        int counter=0;
+
+        for(int i = 0; i < input.length()-1; i++){
+            if(input.charAt(i) == 'g') {
+                counter++;
+                if (input.charAt(i + 1) == 'g') {
+                    counter--;
+                    i++;
+                }
+            }
+
+        }
+        System.out.println(counter);
+
+        return (counter == 0);
     }
 
 
